@@ -1,0 +1,29 @@
+# 🎊 微信拜年自动回复脚本
+
+## 🔧 配置
+
+# 回复风格: "formal" (温馨正式) 或 "humor" (轻松幽默)
+style: "formal"
+
+# 免打扰时段 (24小时制)
+do_not_disturb:
+  enabled: true
+  start: "23:00"
+  end: "08:00"
+
+# 触发关键词 (正则表达式)
+trigger_keywords:
+  - "新年快乐"
+  - "春节快乐"
+  - "拜年"
+  - "过年好"
+  - "龙年大吉"
+  - "新春快乐"
+  - "过年好"
+  - "恭喜发财"
+
+# 检测间隔 (秒)
+check_interval: 2
+
+# 日志级别: "debug", "info", "warning", "error"
+log_level: "info"
