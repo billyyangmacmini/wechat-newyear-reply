@@ -45,6 +45,11 @@ class WechatNewyearReply:
         print("\n👋 收到退出信号，正在停止...")
         self.running = False
     
+    def set_style(self, style):
+        """设置回复风格"""
+        self.style_manager.set_style(style)
+        print(f"✅ 已切换为: {style} 风格")
+    
     def is_in_do_not_disturb(self):
         """检查是否在免打扰时段"""
         if not self.config.get("do_not_disturb", {}).get("enabled", False):
