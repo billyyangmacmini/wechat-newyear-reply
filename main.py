@@ -153,18 +153,12 @@ def main():
             config_file = sys.argv[1]
     
     # 运行时选择风格
-    if len(sys.argv) > 1 and sys.argv[1] not in ["--help", "-h"]:
-        style = sys.argv[1]
-        if style in ["formal", "humor"]:
-            config = {"style": style}
-        else:
-            style = select_style()
-            config = {"style": style}
-    else:
-        style = select_style()
-        config = {"style": style}
+    style = select_style()
     
-    app = WechatNewyearReply(config)
+    # 加载配置
+    app = WechatNewyearReply(config_file)
+    app.set_style(style)
+    
     app.run()
 
 
